@@ -1,4 +1,4 @@
-echo "# Spring Boot Application
+# Spring Boot Application
 
 This is a Spring Boot application that can be built and run locally using Maven, as well as Dockerized for container deployment.
 
@@ -24,13 +24,13 @@ To run the application locally, follow these steps:
 
 ### 2. **Build the Application**
    - After pulling the latest code, run the Maven build to compile and package the Spring Boot application:
-   \`\`\`bash
+   \`\`\`
    mvn clean install
    \`\`\`
 
 ### 3. **Run the Application**
    - Once the application has been successfully built, run the Spring Boot application with:
-   \`\`\`bash
+   \`\`\`
    mvn spring-boot:run
    \`\`\`
    By default, the application will run on port \`8080\`. You can access the application at \`http://localhost:8080\`.
