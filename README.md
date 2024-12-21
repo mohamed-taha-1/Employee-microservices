@@ -18,15 +18,15 @@ To run the application locally, follow these steps:
 
 ### 1. **Pull the Latest Code**
    - First, ensure that you have the latest code from the repository:
-   \`\`\`bash
+   ```bash
    git pull
-   \`\`\`
+   ```
 
 ### 2. **Build the Application**
    - After pulling the latest code, run the Maven build to compile and package the Spring Boot application:
-   \`\`\`
+   ```
    mvn clean install
-   \`\`\`
+   ```
 
 ### 3. **Run the Application**
    - Once the application has been successfully built, run the Spring Boot application with:
