@@ -64,4 +64,10 @@ To Dockerize the Spring Boot application, follow these steps:
    docker push ddddd1234/backend:{version-name}
    ```
 
+### my docker image   [ my backend application ] 
+```bash
+ docker pull ddddd1234/backend
+```
+
+
 
