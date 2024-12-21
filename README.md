@@ -49,19 +49,19 @@ To Dockerize the Spring Boot application, follow these steps:
 ### 1. **Build the Docker Image**
    - To build the Docker image, run the following command in the project root directory (where your Dockerfile is located):
    ```bash
-   docker build -t ddddd1234/myapp:{version-name} .
+   docker build -t ddddd1234/backend:{version-name} .
    ```
 
 ### 2. **Run the Docker Container**
    - After building the Docker image, run it in a container with the following command:
    ```bash
-   docker run -p 8080:8080 ddddd1234/myapp:{version-name}
+   docker run -p 8080:8080 ddddd1234/backend:{version-name}
    ```
 
 ### 3. **Push the Docker Image to Docker Hub**
    - If you need to push the Docker image to Docker Hub, use the following command:
    ```bash
-   docker push ddddd1234/myapp:{version-name}
+   docker push ddddd1234/backend:{version-name}
    ```
 
 
