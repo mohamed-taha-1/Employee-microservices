@@ -2,6 +2,11 @@
 
 This is a Spring Boot application that can be built and run locally using Maven, as well as Dockerized for container deployment.
 
+# OpenAPI Documentation
+
+- Use the `employee.yaml` file located at `src/main/resources/static/open-api-contracts/employee.yaml` and import it into Postman as a collection. Once imported, you can easily interact with the application's endpoints.
+
+
 ## Prerequisites
 
 Before following the steps, ensure you have the following installed on your machine:
@@ -56,7 +61,7 @@ To Dockerize the Spring Boot application, follow these steps:
 ### 3. **Push the Docker Image to Docker Hub**
    - If you need to push the Docker image to Docker Hub, use the following command:
    ```bash
-   docker push ddddd1234/myapp:latest
+   docker push ddddd1234/myapp:{version-name}
    ```
 
-" > README.md
+
