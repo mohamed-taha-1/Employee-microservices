@@ -1,0 +1,179 @@
+openapi: 3.0.0
+info:
+  title: Employee Service API
+  description: API for managing employees
+  version: 1.0.0
+
+paths:
+  /employees:
+    get:
+      summary: Get a list of all employees
+      operationId: getEmployees
+      tags:
+        - Employee
+      responses:
+        '200':
+          description: A list of employees
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Employee'
+    post:
+      summary: Add a new employee
+      operationId: addEmployee
+      tags:
+        - Employee
+      requestBody:
+        description: Employee object that needs to be added
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Employee'
+      responses:
+        '201':
+          description: Employee successfully added
+          content:
+            application/json:  # Corrected from application/text
+              schema:
+                type: string
+                description: The ID of the newly added employee
+
+  /employees/{employeeId}:
+    get:
+      summary: Get a specific employee by ID
+      operationId: getEmployeeById
+      tags:
+        - Employee
+      parameters:
+        - name: employeeId
+          in: path
+          description: ID of the employee to be retrieved
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Employee details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+        '404':
+          description: Employee not found
+
+    put:
+      summary: Update an employee
+      operationId: updateEmployee
+      tags:
+        - Employee
+      parameters:
+        - name: employeeId
+          in: path
+          description: ID of the employee to be updated
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        description: Employee object that needs to be updated
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Employee'
+      responses:
+        '200':
+          description: Employee updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+        '404':
+          description: Employee not found
+        '400':
+          description: Invalid employee data
+
+    delete:
+      summary: Delete an employee
+      operationId: deleteEmployee
+      tags:
+        - Employee
+      parameters:
+        - name: employeeId
+          in: path
+          description: ID of the employee to be deleted
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '204':
+          description: Employee deleted successfully
+        '404':
+          description: Employee not found
+
+  /employees/search:
+    post:
+      summary: Search for employees by search criteria (first name, last name, etc.)
+      operationId: searchEmployees
+      tags:
+        - Employee
+      requestBody:
+        description: Search criteria for filtering employees
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmployeeSearchCriteria'
+      responses:
+        '200':
+          description: A list of employees matching the search criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Employee'
+
+components:
+  schemas:
+    Employee:
+      type: object
+      properties:
+        employeeId:
+          type: integer
+          format: int64
+          description: The unique identifier for an employee
+        employeeFirstName:
+          type: string
+          description: The first name of the employee
+        employeeLastName:
+          type: string
+          description: The last name of the employee
+        employeePhone:
+          type: string
+          description: The phone number of the employee
+        employeeEmail:
+          type: string
+          format: email
+          description: The email address of the employee
+        employeeSalary:
+          type: number
+          format: double
+          description: The salary of the employee
+      additionalProperties: false  # Prevents additional properties
+
+    EmployeeSearchCriteria:
+      type: object
+      properties:
+        employeeFirstName:
+          type: string
+          description: The first name to search for
+        employeeLastName:
+          type: string
+          description: The last name to search for
+      additionalProperties: false  # Prevents additional properties
