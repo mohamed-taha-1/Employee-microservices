@@ -3,6 +3,10 @@ my docker image
 ```bash
  docker pull ddddd1234/backend:v4
 ```
+run the application
+```bash
+   docker run -p 8080:8080 ddddd1234/backend:v4
+```
 
 This is a Spring Boot application that can be built and run locally using Maven, as well as Dockerized for container deployment.
 
