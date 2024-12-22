@@ -1,7 +1,7 @@
 # Spring Boot Application
 my docker image  
 ```bash
- docker pull ddddd1234/backend:v1
+ docker pull ddddd1234/backend:v4
 ```
 
 This is a Spring Boot application that can be built and run locally using Maven, as well as Dockerized for container deployment.
@@ -59,7 +59,7 @@ To Dockerize the Spring Boot application, follow these steps:
 ### 2. **Run the Docker Container**
    - After building the Docker image, run it in a container with the following command:
    ```bash
-   docker run -p 8080:8080 ddddd1234/backend:{version-name}
+    docker run -p 8080:8080 ddddd1234/backend:v4
    ```
 
 ### 3. **Push the Docker Image to Docker Hub**
