@@ -3,7 +3,7 @@ name: first workflow by. Mohamed Taha
 on:
   push: 
     branches: 
-      - main
+      - master
 
 jobs:
   example-job:
