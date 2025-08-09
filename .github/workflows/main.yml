@@ -10,4 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: print a welcome messsage
-        run: echo "welcome dear" 
+        run: echo "welcome dear"
+
+      - name: checkout actions 
+        uses: actions/checkout@v4.2.2
+
+      - name: list repos files
+        run: ll -h 
