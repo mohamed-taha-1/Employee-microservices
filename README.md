@@ -49,7 +49,6 @@ To run the application locally, follow these steps:
    By default, the application will run on port `8080`. You can access the application at `http://localhost:8080`.
 
 ---
-
 ## Docker Image Steps
 
 To Dockerize the Spring Boot application, follow these steps:
