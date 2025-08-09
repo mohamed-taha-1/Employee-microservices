@@ -1,0 +1,13 @@
+name: first workflow by. Mohamed Taha
+
+on:
+  push: 
+    branches: 
+      - main
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: print a welcome messsage
+        run: echo "welcome dear" 
