@@ -13,8 +13,6 @@ This is a Spring Boot application that can be built and run locally using Maven,
 # OpenAPI Documentation
 
 - Use the `employee.yaml` file located at `src/main/resources/static/open-api-contracts/employee.yaml` and import it into Postman as a collection. Once imported, you can easily interact with the application's endpoints.
-
-
 ## Prerequisites
 
 Before following the steps, ensure you have the following installed on your machine:
