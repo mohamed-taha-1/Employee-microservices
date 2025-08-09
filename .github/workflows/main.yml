@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v4.2.2
 
       - name: list repos files
-        run: ll -h 
+        run: ll
