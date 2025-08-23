@@ -32,12 +32,12 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/springboot-app:latest
+          IMAGE_NAME=${{ secrets.DOCKER_USER_NAME }}/springboot-app:latest
           docker build -t $IMAGE_NAME .
 
       - name: docker push
         run: |
-          IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/springboot-app:latest
+          IMAGE_NAME=${{ secrets.DOCKER_USER_NAME }}/springboot-app:latest
           docker push $IMAGE_NAME
           
 
