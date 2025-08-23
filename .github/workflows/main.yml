@@ -21,7 +21,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: build spring abd creating jar file
+      - name: build spring and creating a jar file
         run:  mvn clean install -DskipTests
 
       - name: Docker Login
